@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>three.js CSS3D - iframe navigation</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #000;
+        }
+        #container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+		.mode-toggle-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it stays on top */
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+.mode-toggle-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.add-tab-button {
+    position: fixed;
+    top: 80px; /* Adjusted position to avoid overlapping with the mode button */
+    right: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it stays on top */
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+.add-tab-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.next-tab-button {
+    position: fixed;
+    top: 140px; /* Adjusted position to avoid overlapping with other buttons */
+    right: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it stays on top */
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+.next-tab-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+	<script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.166.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.166.0/examples/jsm/",
+				"tween": "./tween.esm.js"
+            }
+        }
+    </script>
+    
+    <!-- Import the external JS module -->
+    <script type="module" src="main.js"></script>
+</body>
+</html>
